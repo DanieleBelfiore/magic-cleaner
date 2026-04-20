@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="top-bar">
-      <span class="app-id"></span>
+      <span class="app-version">v{{ version }}</span>
       <button class="lang-toggle" @click="$emit('toggle-lang')">
         <span :class="{ active: lang === 'it' }">IT</span>
         <span class="sep">·</span>
@@ -71,6 +71,8 @@ import { ref, computed, watch } from 'vue'
 import { STAINS, TAGS, I18N } from '../data/stains.js'
 import StainCard from '../components/StainCard.vue'
 import '../styles/home.css'
+
+const version = __APP_VERSION__
 
 const props = defineProps({
   lang: { type: String, required: true },
