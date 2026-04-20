@@ -1,0 +1,16 @@
+.urgency-dots {
+  display: inline-flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.urgency-dots .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 99px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.urgency-dots .dot.active {
+  background: var(--accent);
+}

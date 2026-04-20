@@ -1,0 +1,50 @@
+.stain-card {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 18px;
+  background: transparent;
+  transition: background 160ms;
+}
+
+.stain-card:hover,
+.stain-card:active {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.stain-card .swatch {
+  container-type: inline-size;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.02);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stain-card .stain-icon {
+  font-size: 40px;
+  font-size: 60cqi;
+  line-height: 1;
+}
+
+.stain-card .card-footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding: 0 4px;
+}
+
+.stain-card .card-name {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.1;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -0.2px;
+}

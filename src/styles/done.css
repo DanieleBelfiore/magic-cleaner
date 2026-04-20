@@ -1,0 +1,42 @@
+.done {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--paper);
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.done .done-title {
+  font-family: var(--serif);
+  font-size: 48px;
+  line-height: 0.95;
+  font-style: italic;
+  color: var(--ink);
+  letter-spacing: -1.2px;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+.done .done-body {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(0,0,0,0.6);
+  max-width: 300px;
+  margin: 0 auto 40px;
+}
+
+.done .done-btn {
+  all: unset;
+  cursor: pointer;
+  padding: 16px;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+}
