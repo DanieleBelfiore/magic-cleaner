@@ -6,6 +6,8 @@ Mobile-first PWA that guides you through removing stains from clothes, step by s
 
 Built with Vue 3 + Vite. No backend, no account, no ads — works offline after first visit.
 
+**Live Website**: [Home Magic Cleaner](https://home-magic-cleaner.netlify.app)
+
 ## Features
 
 - 12 common stains (wine, coffee, oil, blood, grass, ink, makeup, sweat, chocolate, deodorant, mud, tomato)
