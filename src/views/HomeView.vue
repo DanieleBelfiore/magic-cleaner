@@ -2,11 +2,22 @@
   <div class="home">
     <div class="top-bar">
       <span class="app-version">v{{ version }}</span>
-      <button class="lang-toggle" @click="$emit('toggle-lang')">
-        <span :class="{ active: lang === 'it' }">IT</span>
-        <span class="sep">·</span>
-        <span :class="{ active: lang === 'en' }">EN</span>
-      </button>
+      <div class="top-bar-right">
+        <button class="share-btn" @click="share" :title="lang === 'it' ? 'Condividi' : 'Share'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3" />
+            <circle cx="6" cy="12" r="3" />
+            <circle cx="18" cy="19" r="3" />
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+          </svg>
+        </button>
+        <button class="lang-toggle" @click="$emit('toggle-lang')">
+          <span :class="{ active: lang === 'it' }">IT</span>
+          <span class="sep">·</span>
+          <span :class="{ active: lang === 'en' }">EN</span>
+        </button>
+      </div>
     </div>
 
     <div class="hero">
@@ -73,6 +84,21 @@ import StainCard from '../components/StainCard.vue'
 import '../styles/home.css'
 
 const version = __APP_VERSION__
+
+async function share() {
+  const data = {
+    title: 'Home Magic Cleaner',
+    text: props.lang === 'it'
+      ? 'Rimuovi le macchie dai tuoi vestiti, passo per passo.\n'
+      : 'Remove stains from your clothes, step by step.\n',
+    url: 'https://home-magic-cleaner.danielebelfiore.dev',
+  }
+  if (navigator.share) {
+    await navigator.share(data)
+  } else {
+    await navigator.clipboard.writeText(data.url)
+  }
+}
 
 const props = defineProps({
   lang: { type: String, required: true },

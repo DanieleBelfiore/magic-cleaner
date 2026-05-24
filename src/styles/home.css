@@ -19,6 +19,27 @@
   color: rgba(0, 0, 0, 0.35);
 }
 
+.home .top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home .share-btn {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  color: rgba(0, 0, 0, 0.4);
+  transition: color 140ms;
+}
+
+.home .share-btn:hover { color: var(--ink); }
+
 .home .lang-toggle {
   all: unset;
   cursor: pointer;
