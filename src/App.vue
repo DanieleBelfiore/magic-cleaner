@@ -1,5 +1,5 @@
 <template>
-  <div class="app-shell">
+  <main class="app-shell">
     <HomeView
       v-if="screen.name === 'home'"
       :lang="lang"
@@ -27,7 +27,7 @@
       :lang="lang"
       @another="goHome"
     />
-  </div>
+  </main>
 </template>
 
 <script setup>

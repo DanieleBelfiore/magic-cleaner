@@ -13,6 +13,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'autoUpdate',
+      injectRegister: 'script-defer',
       manifest: {
         name: 'Home Magic Cleaner',
         short_name: 'Macchia',
